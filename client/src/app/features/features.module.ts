@@ -9,18 +9,13 @@ import { LastPostComponent } from './last-post/last-post.component';
 import { LastPostService } from './last-post/last-post.service';
 
 @NgModule({
-  declarations: [
-    LastPostComponent,
-  ],
+  declarations: [ LastPostComponent ],
   imports: [
     CommonModule,
     FeaturesRoutingModule,
     FlexLayoutModule,
     MatCardModule,
     MatProgressBarModule,
-  ],
-  providers: [
-    LastPostService,
-  ],
+  ]
 })
 export class FeaturesModule { }

@@ -6,7 +6,9 @@ import { Observable } from 'rxjs';
 import { LastPost } from './last-post';
 import { RequestService } from 'src/app/core/request.service';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class LastPostService {
 
   constructor(private http: HttpClient, private requestService: RequestService) { }
@@ -14,5 +16,4 @@ export class LastPostService {
   public get(userId: number): Observable<LastPost> {
     return this.http.get<LastPost>(this.requestService.url('last-post', `?type=2&userId=${userId}`));
   }
-
 }
